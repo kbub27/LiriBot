@@ -1,0 +1,26 @@
+{
+  "name": "liribot",
+  "version": "1.0.0",
+  "description": "Like Siri but Liri",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbub27/LiriBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbub27/LiriBot/issues"
+  },
+  "homepage": "https://github.com/kbub27/LiriBot#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bandsintown": "^1.0.1",
+    "omdb-wrapper": "^1.0.2",
+    "spotify": "^0.3.0"
+  }
+}
