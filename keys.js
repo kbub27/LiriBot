@@ -1,5 +1,5 @@
 // SPOTIFY KEY EXPORT
-console.log('this is loaded');
+console.log('keys.js is loaded');
 
 exports.spotify = {
   id: process.env.SPOTIFY_ID,
@@ -10,4 +10,4 @@ exports.spotify = {
 exports.omdbKey = process.env.OMDB_KEY;
 
 //BANDS IN TOWN KEY EXPORT
-exports.bandsID = process.env.BAND_IN_TOWN;
+exports.bandsID = process.env.BANDS_IN_TOWN;
