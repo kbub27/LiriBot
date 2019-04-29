@@ -6,7 +6,7 @@ var axios = require('axios');
 var Spotify = require('node-spotify-api');
 var fs = require('fs');
 var command = process.argv[2];
-var artist = process.argv.slice(3).join('_')
+var artist = process.argv.slice(3).join('%20')
 var bandsQuery = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + keys.bandsID
 var movie = process.argv.slice(3).join('+')
 var movieQuery = 'http://www.omdbapi.com/?apikey=' + keys.omdbKey + '&t=' + movie + '&plot=short';
@@ -35,7 +35,6 @@ function getConcert() {
     axios.get(bandsQuery)
     .then(function (response) {
         //LOG RESPONSE HERE
-        console.log(artist)
         console.log('\nConcert-this\n')
         console.log('Venue: ' + response.data[0].venue.name);
         console.log('Location: ' + response.data[0].venue.country + ',' + response.data[0].venue.city);
@@ -85,9 +84,8 @@ if (command === 'movie-this') {
         } else if ('concert-this') {
             sep[1] = sep[1].replace(/['"]+/g, '');
             var res = sep[1].split(' ');
-            artist = res.join('_');
+            artist = res.join('%20');
             bandsQuery = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + keys.bandsID
-            console.log(artist)
             getConcert();
         }
     });
