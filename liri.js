@@ -14,6 +14,9 @@ var song = process.argv.slice(3).join(' ')
 
 //QUERY FOR OMDB
 function getMovie() {
+    if (!movie) {
+        movieQuery = 'http://www.omdbapi.com/?apikey=' + keys.omdbKey + '&t=mr.nobody&plot=short';
+    }
     axios.get(movieQuery)
     .then(function (response) {
         //LOG RESPONSE HERE
