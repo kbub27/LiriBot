@@ -7,6 +7,8 @@
 
 This is an app that takes in command line arguments and responds within the terminal with data pertaining to the specific command that it was given.
 
+<img src="images\Screenshot (15).png" height= 600px width=1000px>
+
 ### How to use 
 
 * In your termiinal type: node  *your_file_name* **command-argument** *argument*
