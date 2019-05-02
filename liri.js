@@ -82,7 +82,10 @@ if (command === 'movie-this') {
             song = sep[1];
             getSong();
         } else if (sep[0] === 'movie-this') {
-            movieQuery = 'http://www.omdbapi.com/?apikey=' + keys.omdbKey + '&t=' + sep[1] + '&plot=short'
+            sep[1] = sep[1].replace(/['"]+/g, '');
+            var res = sep[1].split(' ');
+            movie = res.join('+');
+            movieQuery = 'http://www.omdbapi.com/?apikey=' + keys.omdbKey + '&t=' + movie + '&plot=short';
             getMovie();
         } else if ('concert-this') {
             sep[1] = sep[1].replace(/['"]+/g, '');
